@@ -1,0 +1,501 @@
+/* ============================================================
+   CyberPulse Gaming - estilos globales
+   Estética: negro con neón magenta y cian
+   ============================================================ */
+
+:root {
+  --fondo: #07070d;
+  --fondo-2: #0f0f1a;
+  --fondo-3: #171726;
+  --magenta: #ff2bd6;
+  --cian: #00e5ff;
+  --texto: #e8e8f2;
+  --texto-suave: #9a9ab5;
+  --borde: #2a2a44;
+}
+
+/* ---------- Base (anula los estilos por defecto de Vite) ---------- */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: block;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+
+/* Contenedor general: header, páginas y footer en columna */
+.app-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+h1, h2, h3, h4 { color: #fff; margin-top: 0; }
+a { color: var(--cian); text-decoration: none; }
+a:hover { color: var(--magenta); text-shadow: 0 0 8px var(--magenta); }
+ul { list-style: none; margin: 0; padding: 0; }
+button { font-family: inherit; cursor: pointer; }
+p { margin-top: 0; }
+
+/* ---------- Caja base con borde neón suave ---------- */
+.caja-cp {
+  background: var(--fondo-2);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 0 14px rgba(255, 43, 214, 0.15);
+}
+
+/* ---------- Títulos de sección ---------- */
+.titulo-cont {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--magenta);
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.titulo-cont span:first-child {
+  color: #fff;
+  text-shadow: 0 0 10px var(--cian);
+}
+
+.titulo-chico { font-size: 1.2rem; }
+
+/* ---------- Header ---------- */
+.header-cp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid var(--magenta);
+  box-shadow: 0 0 14px rgba(255, 43, 214, 0.35);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+.logo-cp {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--magenta), var(--cian));
+  box-shadow: 0 0 12px var(--magenta);
+}
+
+.logo-texto {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 0 10px var(--cian);
+}
+
+.logo-texto span { color: var(--magenta); text-shadow: 0 0 10px var(--magenta); }
+
+.header-acciones { display: flex; align-items: center; gap: 0.75rem; }
+
+.btn-carrito-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--cian);
+  border: 2px solid var(--cian);
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-carrito-header:hover {
+  background: var(--cian);
+  color: #000;
+  box-shadow: 0 0 14px var(--cian);
+}
+
+.badge-contador {
+  display: inline-block;
+  min-width: 24px;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--magenta);
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+  box-shadow: 0 0 8px var(--magenta);
+}
+
+/* ---------- Menú principal ---------- */
+.navbar-cp { padding: 0.5rem 1rem; }
+
+.nav-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; }
+
+.nav-link-cp {
+  background: transparent;
+  border: none;
+  color: var(--texto-suave);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nav-link-cp:hover { color: #fff; background: var(--fondo-3); }
+
+.nav-link-cp.activo {
+  color: #fff;
+  background: var(--fondo-3);
+  box-shadow: inset 0 -3px 0 var(--magenta);
+}
+
+/* ---------- Carrusel ---------- */
+.carrusel-contenedor {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid var(--cian);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.4);
+  background: #000;
+}
+
+.carrusel-slide { display: block; width: 100%; max-height: 460px; object-fit: cover; }
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--magenta);
+  background: rgba(7, 7, 13, 0.75);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.carrusel-btn:hover { background: var(--magenta); box-shadow: 0 0 14px var(--magenta); }
+.carrusel-btn.prev { left: 12px; }
+.carrusel-btn.next { right: 12px; }
+
+.carrusel-indicadores {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.indicador-punto {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--cian);
+  background: transparent;
+}
+
+.indicador-punto.activo { background: var(--cian); box-shadow: 0 0 8px var(--cian); }
+
+/* ---------- Botones ---------- */
+.btn-cp {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--magenta);
+  border-radius: 8px;
+  padding: 0.55rem 1.1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-cp.btn-sm { padding: 0.3rem 0.7rem; font-size: 0.85rem; }
+
+.btn-principal { background: var(--magenta); }
+.btn-principal:hover { background: #d91fb4; border-color: #d91fb4; box-shadow: 0 0 14px var(--magenta); }
+
+.btn-secundario { border-color: var(--cian); color: var(--cian); }
+.btn-secundario:hover { background: var(--cian); color: #000; box-shadow: 0 0 14px var(--cian); }
+
+.btn-quitar { border-color: var(--borde); background: var(--fondo-3); color: var(--texto); }
+.btn-quitar:hover { border-color: var(--magenta); color: var(--magenta); }
+
+/* ---------- Tarjetas de videojuegos ---------- */
+.cont-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-cp {
+  display: flex;
+  flex-direction: column;
+  background: var(--fondo-3);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-cp:hover {
+  transform: translateY(-4px);
+  border-color: var(--magenta);
+  box-shadow: 0 0 16px rgba(255, 43, 214, 0.45);
+}
+
+.card-imagen-wrapper {
+  position: relative;
+  height: 190px;
+  background: linear-gradient(135deg, #1a0a2e, #06222b);
+}
+
+.card-img-top { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.badge-descuento {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--magenta);
+  color: #fff;
+  font-weight: 800;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  box-shadow: 0 0 10px var(--magenta);
+}
+
+.card-cuerpo { display: flex; flex-direction: column; gap: 0.5rem; padding: 1rem; flex: 1; }
+
+.card-categoria-autor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.etiqueta-categoria {
+  background: rgba(255, 43, 214, 0.15);
+  border: 1px solid var(--magenta);
+  color: var(--magenta);
+  border-radius: 999px;
+  padding: 0.1rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.card-autor { color: var(--texto-suave); font-size: 0.8rem; }
+.card-title { margin: 0; font-size: 1.15rem; color: #fff; }
+.card-descripcion { margin: 0; color: var(--texto-suave); font-size: 0.9rem; flex: 1; }
+
+.precios-contenedor { display: flex; align-items: baseline; gap: 0.6rem; }
+.precio-normal { color: var(--texto-suave); text-decoration: line-through; font-size: 0.9rem; }
+.precio-oferta { color: var(--cian); font-weight: 800; font-size: 1.3rem; }
+
+/* ---------- Página Producto ---------- */
+.layout-productos-carrito {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.filtros-barra { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem; }
+.buscador-input-group { display: flex; gap: 0.5rem; }
+.buscador-input-group .input-cp { flex: 1; }
+
+.input-cp, .select-cp, .textarea-cp {
+  width: 100%;
+  background: var(--fondo-3);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--texto);
+  padding: 0.55rem 0.8rem;
+  font-family: inherit;
+}
+
+.input-cp:focus, .select-cp:focus, .textarea-cp:focus {
+  outline: none;
+  border-color: var(--cian);
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+}
+
+.input-cp::placeholder { color: var(--texto-suave); }
+
+.categorias-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.btn-pill {
+  background: transparent;
+  border: 2px solid var(--cian);
+  color: var(--cian);
+  border-radius: 999px;
+  padding: 0.25rem 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-pill:hover, .btn-pill.activa { background: var(--cian); color: #000; box-shadow: 0 0 12px var(--cian); }
+
+/* ---------- Carrito ---------- */
+.seccion-carrito {
+  border: 2px solid var(--cian);
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.3);
+  position: sticky;
+  top: 1rem;
+}
+
+.insignia {
+  background: var(--magenta);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0 0.6rem;
+  font-size: 0.9rem;
+}
+
+.item-carrito-simple {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.item-carrito-titulo { color: #fff; font-weight: 600; }
+.item-carrito-precio { color: var(--cian); font-size: 0.9rem; }
+.total-contenedor-simple { margin-top: 1rem; font-weight: 700; }
+#total-precio { color: var(--cian); font-size: 1.2rem; font-weight: 800; }
+
+/* ---------- Contacto ---------- */
+.contacto-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1.25rem; align-items: start; }
+.form-grupo { margin-bottom: 1rem; }
+.form-label { display: block; color: var(--texto-suave); margin-bottom: 0.3rem; }
+.error-campo { color: #ff8be9; font-size: 0.85rem; margin-top: 0.25rem; }
+
+.alerta-exito, .alerta-error {
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.alerta-exito { background: rgba(0, 229, 255, 0.1); border: 1px solid var(--cian); color: var(--cian); }
+.alerta-error { background: rgba(255, 43, 214, 0.1); border: 1px solid var(--magenta); color: #ff8be9; margin-bottom: 0; }
+
+/* ---------- Pantalla de carga ---------- */
+.cargando-cp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+  color: var(--cian);
+}
+
+.spinner-cp {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--borde);
+  border-top-color: var(--magenta);
+  border-right-color: var(--cian);
+  border-radius: 50%;
+  animation: girar 0.9s linear infinite;
+}
+
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* ---------- Footer ---------- */
+.pie-cp {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  border-top: 2px solid var(--cian);
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.3);
+}
+
+.pie-columna h4 { color: var(--magenta); text-shadow: 0 0 8px var(--magenta); margin-bottom: 0.6rem; }
+.pie-columna p { color: var(--texto-suave); margin-bottom: 0.25rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .layout-productos-carrito, .contacto-grid { grid-template-columns: 1fr; }
+  .seccion-carrito { position: static; }
+}
+
+@media (max-width: 600px) {
+  .header-cp { flex-direction: column; }
+  .logo-texto { font-size: 1.2rem; }
+  .titulo-cont { font-size: 1.3rem; }
+  .carrusel-btn { width: 36px; height: 36px; }
+}
+
+/* ---------- Ajustes de Bootstrap para el tema oscuro ---------- */
+.card-cp { color: var(--texto); }
+
+.form-control,
+.form-select {
+  background-color: var(--fondo-3);
+  border: 1px solid var(--borde);
+  color: var(--texto);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--fondo-3);
+  color: #fff;
+  border-color: var(--cian);
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+}
+
+.form-control::placeholder { color: var(--texto-suave); }
+
+.list-group-item {
+  background: transparent;
+  color: var(--texto);
+  border-color: var(--borde);
+}
+
+.alert-danger {
+  background: rgba(255, 43, 214, 0.1);
+  border: 1px solid var(--magenta);
+  color: #ff8be9;
+}
