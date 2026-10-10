@@ -1,6 +1,5 @@
-
 [
-  { "id": 1, "titulo": "Agente Sombra", "categoria": "Acción", "desarrollador": "Nombre Estudio", "descripcion": "Escribe aquí una descripción corta.", "precio": 29990, "precioOferta": 24990, "img": "agente_sombra.jpg" },
-  { "id": 2, "titulo": "Neo-Santiago", "categoria": "Aventura", "desarrollador": "Nombre Estudio", "descripcion": "Escribe aquí una descripción corta.", "precio": 34990, "precioOferta": 29990, "img": "neo_santiago.jpg" },
-  { "id": 3, "titulo": "Tierra Cero", "categoria": "Supervivencia", "desarrollador": "Nombre Estudio", "descripcion": "Escribe aquí una descripción corta.", "precio": 24990, "precioOferta": 19990, "img": "tierra_cero.jpg" }
+  { "id": 1, "titulo": "Agente Sombra", "categoria": "Acción", "desarrollador": "Tu Estudio", "descripcion": "Infíltrate en una ciudad de neón y completa misiones de sigilo.", "precio": 29990, "precioOferta": 24990, "img": "agente_sombra.jpg" },
+  { "id": 2, "titulo": "Neo-Santiago", "categoria": "Aventura", "desarrollador": "Tu Estudio", "descripcion": "Recorre un Santiago futurista lleno de secretos y peligros.", "precio": 34990, "precioOferta": 29990, "img": "neo_santiago.jpg" },
+  { "id": 3, "titulo": "Tierra Cero", "categoria": "Terror", "desarrollador": "Tu Estudio", "descripcion": "Sobrevive en un mundo devastado donde nada es lo que parece.", "precio": 24990, "precioOferta": 19990, "img": "tierra_cero.jpg" }
 ]
