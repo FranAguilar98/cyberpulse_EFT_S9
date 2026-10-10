@@ -16,7 +16,7 @@ export default function TarjetaVideoJ({ producto, carrito, alAgregar, alQuitar }
       <div className="card-imagen-wrapper">
         <img
           className="card-img-top"
-          src={`${import.meta.env.BASE_URL}img/${producto.img}`}
+          src={`${import.meta.env.BASE_URL}imag/${producto.img}`}
           alt={`Portada de ${producto.titulo}`}
         />
         {descuento > 0 && <span className="badge badge-descuento">-{descuento}%</span>}

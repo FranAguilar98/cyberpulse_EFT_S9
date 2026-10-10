@@ -3,7 +3,7 @@ import ListaVideoJ from '../videojuegos/ListaVideoJ';
 import Carrito from '../videojuegos/Carrito';
 
 // Categorías disponibles para filtrar el catálogo
-const CATEGORIAS = ['todos', 'Acción', 'Aventura', 'RPG', 'Deportes', 'Carreras', 'Terror'];
+const CATEGORIAS = ['todos', 'Acción', 'Aventura', 'Terror'];
 
 export default function Producto({ videojuegos, cargando, categoriaInicial, alAgregar, carrito, alQuitar, alVaciar }) {
   // Estados: categoría activa, texto del input y búsqueda aplicada

@@ -3,9 +3,9 @@ import { useState } from 'react';
 const base = import.meta.env.BASE_URL;
 
 const slides = [
-  { src: `${base}img/banner_inicio.jpg`, alt: 'Bienvenido a CyberPulse Gaming' },
-  { src: `${base}img/banner_productos.jpg`, alt: 'Los mejores videojuegos en CyberPulse Gaming' },
-  { src: `${base}img/banner_redes.jpg`, alt: 'CyberPulse Gaming en redes sociales' },
+  { src: `${base}imag/banner_quienes_somos.jpg`, alt: 'Quiénes somos en CyberPulse Gaming' },
+  { src: `${base}imag/banner_productos.jpg`, alt: 'Nuestros videojuegos en CyberPulse Gaming' },
+  { src: `${base}imag/banner_redes.jpg`, alt: 'CyberPulse Gaming en redes sociales' },
 ];
 
 export default function Carrusel() {

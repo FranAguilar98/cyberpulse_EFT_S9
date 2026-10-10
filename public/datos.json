@@ -1,9 +1,5 @@
-
 [
-  { "id": 1, "titulo": "Cyber Racer 2077", "categoria": "Carreras", "desarrollador": "Neon Studios", "descripcion": "Carreras futuristas a toda velocidad por ciudades de neón.", "precio": 29990, "precioOferta": 19990, "img": "cyber_racer.jpg" },
-  { "id": 2, "titulo": "Neon Warriors", "categoria": "Acción", "desarrollador": "Pulse Games", "descripcion": "Combates cuerpo a cuerpo en un mundo cibernético.", "precio": 39990, "precioOferta": 34990, "img": "neon_warriors.jpg" },
-  { "id": 3, "titulo": "Pulse Quest", "categoria": "RPG", "desarrollador": "Quantum Forge", "descripcion": "Explora ciudades abandonadas y mejora a tu personaje.", "precio": 44990, "precioOferta": 39990, "img": "pulse_quest.jpg" },
-  { "id": 4, "titulo": "Shadow Signal", "categoria": "Terror", "desarrollador": "Dark Circuit", "descripcion": "Sobrevive en una estación espacial sin señal ni esperanza.", "precio": 24990, "precioOferta": 19990, "img": "shadow_signal.jpg" },
-  { "id": 5, "titulo": "Turbo Arena", "categoria": "Deportes", "desarrollador": "Hyper Sports Lab", "descripcion": "Deportes extremos del futuro en arenas holográficas.", "precio": 34990, "precioOferta": 29990, "img": "turbo_arena.jpg" },
-  { "id": 6, "titulo": "Echo Frontier", "categoria": "Aventura", "desarrollador": "Starlight Works", "descripcion": "Un viaje por planetas desconocidos lleno de misterios.", "precio": 27990, "precioOferta": 22990, "img": "echo_frontier.jpg" }
+  { "id": 1, "titulo": "Agente Sombra", "categoria": "Acción", "desarrollador": "Tu Estudio", "descripcion": "Infíltrate en una ciudad de neón y completa misiones de sigilo.", "precio": 29990, "precioOferta": 24990, "img": "agente_sombra.jpg" },
+  { "id": 2, "titulo": "Neo-Santiago", "categoria": "Aventura", "desarrollador": "Tu Estudio", "descripcion": "Recorre un Santiago futurista lleno de secretos y peligros.", "precio": 34990, "precioOferta": 29990, "img": "neo_santiago.jpg" },
+  { "id": 3, "titulo": "Tierra Cero", "categoria": "Terror", "desarrollador": "Tu Estudio", "descripcion": "Sobrevive en un mundo devastado donde nada es lo que parece.", "precio": 24990, "precioOferta": 19990, "img": "tierra_cero.jpg" }
 ]

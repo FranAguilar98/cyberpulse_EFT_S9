@@ -20,15 +20,20 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
   min-height: 100vh;
   display: block;
+  overflow-x: hidden;
   background: var(--fondo);
   color: var(--texto);
   font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
   line-height: 1.5;
 }
 
+img, video { max-width: 100%; }
+
 #root {
+  width: 100%;
   max-width: none;
   margin: 0;
   padding: 0;
@@ -262,7 +267,7 @@ p { margin-top: 0; }
 /* ---------- Tarjetas de videojuegos ---------- */
 .cont-tarjetas {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
   gap: 1.25rem;
   margin-bottom: 1rem;
 }
@@ -283,9 +288,10 @@ p { margin-top: 0; }
   box-shadow: 0 0 16px rgba(255, 43, 214, 0.45);
 }
 
+/* Opción A: portada vertical 3:4 (el alto se calcula solo según el ancho) */
 .card-imagen-wrapper {
   position: relative;
-  height: 190px;
+  aspect-ratio: 3 / 4;
   background: linear-gradient(135deg, #1a0a2e, #06222b);
 }
 
@@ -334,7 +340,7 @@ p { margin-top: 0; }
 /* ---------- Página Producto ---------- */
 .layout-productos-carrito {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: minmax(0, 1fr) 300px;
   gap: 1.25rem;
   align-items: start;
 }
@@ -406,7 +412,12 @@ p { margin-top: 0; }
 #total-precio { color: var(--cian); font-size: 1.2rem; font-weight: 800; }
 
 /* ---------- Contacto ---------- */
-.contacto-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1.25rem; align-items: start; }
+.contacto-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
 .form-grupo { margin-bottom: 1rem; }
 .form-label { display: block; color: var(--texto-suave); margin-bottom: 0.3rem; }
 .error-campo { color: #ff8be9; font-size: 0.85rem; margin-top: 0.25rem; }
@@ -446,7 +457,7 @@ p { margin-top: 0; }
 .pie-cp {
   margin-top: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
   gap: 1.5rem;
   border-top: 2px solid var(--cian);
   box-shadow: 0 0 14px rgba(0, 229, 255, 0.3);
@@ -457,15 +468,23 @@ p { margin-top: 0; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .layout-productos-carrito, .contacto-grid { grid-template-columns: 1fr; }
+  .layout-productos-carrito,
+  .contacto-grid { grid-template-columns: minmax(0, 1fr); }
   .seccion-carrito { position: static; }
+  .carrusel-slide { max-height: 340px; }
 }
 
 @media (max-width: 600px) {
-  .header-cp { flex-direction: column; }
+  .app-contenedor { padding: 0.5rem; gap: 1rem; }
+  .caja-cp { padding: 1rem; }
+  .header-cp { flex-direction: column; text-align: center; }
+  .header-acciones { width: 100%; justify-content: center; }
   .logo-texto { font-size: 1.2rem; }
   .titulo-cont { font-size: 1.3rem; }
-  .carrusel-btn { width: 36px; height: 36px; }
+  .nav-link-cp { padding: 0.45rem 0.8rem; font-size: 0.9rem; }
+  .carrusel-slide { height: 200px; max-height: none; }
+  .carrusel-btn { width: 36px; height: 36px; font-size: 1.3rem; }
+  .buscador-input-group { flex-direction: column; }
 }
 
 /* ---------- Ajustes de Bootstrap para el tema oscuro ---------- */
