@@ -1,29 +1,12 @@
 # CyberPulse Gaming
 
-Tienda online de videojuegos con estética neón (negro, magenta y cian), desarrollada como proyecto académico con **React**, **Vite** y **Bootstrap 5**.
-
-**Sitio publicado:** https://franaguilar98.github.io/cyberpulse_EFT_S9/
-
----
-
-## Tabla de contenidos
-
-1. [Descripción](#descripción)
-2. [Funcionalidades](#funcionalidades)
-3. [Tecnologías](#tecnologías)
-4. [Instalación y ejecución](#instalación-y-ejecución)
-5. [Estructura del proyecto](#estructura-del-proyecto)
-6. [Cómo funciona](#cómo-funciona)
-7. [Cómo agregar un videojuego](#cómo-agregar-un-videojuego)
-8. [Responsividad](#responsividad)
-9. [Publicación en GitHub Pages](#publicación-en-github-pages)
-10. [Autor](#autor)
+Tienda online de videojuegos, creada para EFT del ramo de Frontend I con **React**, **Vite** y **Bootstrap 5**.
 
 ---
 
 ## Descripción
 
-CyberPulse Gaming es un sitio web de una sola página (SPA) para una tienda de videojuegos. Permite ver el catálogo, filtrar por categoría, buscar por título, armar un carrito de compras y escribir al administrador mediante un formulario de contacto con validación.
+CyberPulse Gaming es un sitio web para una tienda de videojuegos. Permite ver el catálogo, filtrar por categoría, buscar por título, armar un carrito de compras y escribir al administrador mediante un formulario de contacto con validación.
 
 El sitio tiene tres secciones:
 
@@ -77,15 +60,6 @@ npm run dev
 
 Abre en el navegador la dirección que muestra la terminal (normalmente `http://localhost:5173/cyberpulse_EFT_S9/`).
 
-### Scripts disponibles
-
-| Comando | Qué hace |
-|---|---|
-| `npm run dev` | Inicia el servidor de desarrollo |
-| `npm run build` | Genera la versión de producción en `dist/` |
-| `npm run preview` | Previsualiza la versión de producción |
-| `npm run lint` | Revisa el código con Oxlint |
-| `npm run deploy` | Compila y publica en GitHub Pages (rama `gh-pages`) |
 
 ## Estructura del proyecto
 
@@ -214,8 +188,3 @@ npm run deploy
 Después, en GitHub: **Settings → Pages → Source: Deploy from a branch → rama `gh-pages` → `/ (root)`**.
 
 > Si cambias el nombre del repositorio, actualiza el valor de `base` en `vite.config.js`.
-
-## Autor
-
-**Fran Aguilar**: estudiante de DUOC UC.
-Repositorio: https://github.com/FranAguilar98/cyberpulse_EFT_S9
