@@ -187,4 +187,4 @@ npm run deploy
 
 Después, en GitHub: **Settings → Pages → Source: Deploy from a branch → rama `gh-pages` → `/ (root)`**.
 
-> Si cambias el nombre del repositorio, actualiza el valor de `base` en `vite.config.js`.
+
