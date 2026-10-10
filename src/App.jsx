@@ -92,36 +92,38 @@ function App() {
     <div className="app-contenedor">
       <Header vista={vista} setVista={setVista} irAProducto={irAProducto} totalCarrito={carrito.length} />
 
-      {/* Renderizado condicional: aviso si falló la carga del catálogo */}
-      {error && vista !== 'contacto' && (
-        <div className="alert alert-danger mb-0" role="alert">{error}</div>
-      )}
+      <main className="contenido-principal">
+        {/* Renderizado condicional: aviso si falló la carga del catálogo */}
+        {error && vista !== 'contacto' && (
+          <div className="alert alert-danger mb-0" role="alert">{error}</div>
+        )}
 
-      {/* Renderizado condicional de páginas según la vista actual */}
-      {vista === 'inicio' && !error && (
-        <Inicio
-          videojuegos={videojuegos}
-          cargando={cargando}
-          carrito={carrito}
-          alAgregar={agregarACarrito}
-          alQuitar={quitarDelCarrito}
-          irAProducto={irAProducto}
-        />
-      )}
+        {/* Renderizado condicional de páginas según la vista actual */}
+        {vista === 'inicio' && !error && (
+          <Inicio
+            videojuegos={videojuegos}
+            cargando={cargando}
+            carrito={carrito}
+            alAgregar={agregarACarrito}
+            alQuitar={quitarDelCarrito}
+            irAProducto={irAProducto}
+          />
+        )}
 
-      {vista === 'producto' && !error && (
-        <Producto
-          videojuegos={videojuegos}
-          cargando={cargando}
-          categoriaInicial={categoriaFiltro}
-          carrito={carrito}
-          alAgregar={agregarACarrito}
-          alQuitar={quitarDelCarrito}
-          alVaciar={vaciarCarrito}
-        />
-      )}
+        {vista === 'producto' && !error && (
+          <Producto
+            videojuegos={videojuegos}
+            cargando={cargando}
+            categoriaInicial={categoriaFiltro}
+            carrito={carrito}
+            alAgregar={agregarACarrito}
+            alQuitar={quitarDelCarrito}
+            alVaciar={vaciarCarrito}
+          />
+        )}
 
-      {vista === 'contacto' && <Contacto />}
+        {vista === 'contacto' && <Contacto />}
+      </main>
 
       <Footer />
     </div>
